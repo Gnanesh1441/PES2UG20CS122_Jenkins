@@ -24,7 +24,7 @@ pipeline {
     }
 
     post {
-        always {
+        alys {
             script {
                 if (currentBuild.result == 'FAILURE') {
                     echo 'pipeline failed'
