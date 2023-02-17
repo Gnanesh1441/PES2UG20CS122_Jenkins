@@ -24,9 +24,9 @@ pipeline {
     }
 
     post {
-         {
+        always{
             script {
-                if (currentBuild.result == 'FAILURE') {
+                if (currentBuild.result += 'FAILURE') {
                     echo 'pipeline failed'
                 }
             }
