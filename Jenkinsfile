@@ -10,7 +10,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './PES2UG20CS122-1'
+                sh './PES2UG20CS1-1'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
     post {
         always{
             script {
-                if (currentBuild.result += 'FAILURE') {
+                if (currentBuild.result == 'FAILURE') {
                     echo 'pipeline failed'
                 }
             }
